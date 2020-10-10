@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .box{
+      width: 50px;
+      height: 50px;
+      
+      margin: 20px;
+
+    }
+  </style>
+  <div id="app">
+    
+  </div>
+  <button>Clique em mim</button>
+  
+  <script>
+    const btnElement = document.querySelector('button');
+    const boxElement = document.querySelector('#app');
+    
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+     }
+     
+
+    btnElement.onclick = function () {
+      
+      let newColor = getRandomColor();
+      
+      let newDiv = document.createElement('div');
+      newDiv.setAttribute('class','box');
+      newDiv.style.backgroundColor = newColor; 
+      boxElement.appendChild(newDiv);
+    }
+
+    
+
+    
+    
+
+      
+    
+  </script>
+</body>
+</html>

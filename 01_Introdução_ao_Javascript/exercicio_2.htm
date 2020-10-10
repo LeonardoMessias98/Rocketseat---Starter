@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Pares</h2>
+    <input id='x' type="text" placeholder="digite x">
+    <input id="y" type="text" placeholder="digite y">
+    <button type="button" c></button>
+    <div id='resultado'></div>
+
+    <script>
+
+        const btnElement = document.querySelector('button');
+
+        btnElement.onclick = function(){
+            let x = document.getElementById('x').value;
+            let y = document.getElementById('y').value;
+            
+            
+            for (x; x <= y; x++){
+                if (x % 2 == 0){
+                    document.getElementById('resultado').append(x,' ')
+                }
+                
+            }
+            
+        }
+        
+        
+        
+    </script>
+</body>
+</html>

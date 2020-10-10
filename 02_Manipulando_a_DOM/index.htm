@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <h3>Cadastre sites</h3>
+    <h4>não esqueça de inserir o " https:// "</h4>
+    <input placeholder="Digite o url do site"/>
+    <input placeholder="Digite o nome do site"/>
+    <button type="text">Cadastrar</button>
+    <div id="app" style="display: flex; flex-direction:column;">
+        
+    </div>
+
+
+    <script>
+
+        const btnElement = document.querySelector('button');
+
+        btnElement.onclick = function (){
+            let inputURL = document.querySelectorAll('input')[0].value
+            let inputName = document.querySelectorAll('input')[1].value
+
+            console.log(inputURL,inputName);
+            
+            const urlElement = document.createElement('a');
+            urlElement.setAttribute('href', inputURL);
+            urlElement.setAttribute('target', '_blank');
+
+
+            const nameElement = document.createTextNode(inputName);
+            urlElement.appendChild(nameElement);
+
+            const containerElement = document.querySelector('#app')
+            containerElement.appendChild(urlElement)
+
+        }
+
+    </script>
+</body>
+</html>

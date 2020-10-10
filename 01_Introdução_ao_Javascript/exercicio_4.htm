@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio_5</title>
+</head>
+<body>
+    <input  id='anos' placeholder="Digite seus anos de experiencia"/>
+    <button onClick="exp()">Verificar</button>
+    <p id="return"></p>
+    <script>
+        
+        let msg = 'Apenas Numeros Positivos';
+        
+        
+        function exp(){
+            let ano = document.getElementById('anos').value;
+
+            if (ano == 0 || ano == 1){
+                msg = 'Iniciante';
+                
+            }
+            else if (ano > 1 & ano <=3){
+                msg ='Intermediario';
+            }
+            else if (ano > 3 & ano <=6){
+                msg ='Avançado';
+            }
+            else if (ano >= 7){
+                msg ='Jedi Master';
+            }
+
+            document.getElementById('return').innerHTML = msg;
+        }
+    </script>
+</body>
+</html>

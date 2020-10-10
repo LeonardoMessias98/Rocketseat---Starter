@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input  id="texto" placeholder="Digite um texto">
+    <input id="elemento" placeholder="Digite a palavra a ser verificada">
+    <button type="button" >Verificar</button>
+    <script>
+        
+        const btnElement = document.querySelector('button');
+
+        btnElement.onclick = function (){
+            let texto = document.getElementById('texto').value;
+            let elemento = document.getElementById('elemento').value; 
+
+            
+            let posi = texto.indexOf(elemento);
+            if (posi === -1){
+                console.log(false)
+            }
+            else{
+                console.log(true)
+            }
+        
+        }
+        
+    </script>
+</body>
+</html>

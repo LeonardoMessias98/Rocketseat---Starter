@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio_5</title>
+</head>
+<body>
+    
+    <button onClick="call()">Verificar</button>
+    <p id="returnn"></p>
+    <script>
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+            
+        function call(){
+            let cont;
+            for (let i of usuarios){
+                                      
+                cont ++;
+                const t1 = 'O '
+                const t2 = ' possui as habilidades: '
+                texto = t1 + i.nome + t2 + i.habilidades.join(' ')
+                console.log(texto)
+                   
+                
+            }
+        }
+
+    </script>
+</body>
+</html>
